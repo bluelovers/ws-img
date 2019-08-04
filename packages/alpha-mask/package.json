@@ -1,6 +1,6 @@
 {
   "name": "alpha-mask",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "merge source.png with mask.png to alpha.png",
   "homepage": "https://github.com/bluelovers/ws-img#readme",
   "bugs": {
@@ -54,8 +54,8 @@
   },
   "dependencies": {
     "bluebird": "^3.5.5",
-    "png-scale": "^1.0.3",
     "get-stream": "^5.1.0",
+    "png-scale": "^1.0.3",
     "pngjs": "^3.4.0"
   },
   "devDependencies": {
@@ -66,7 +66,6 @@
     "@types/pngjs": "^3.3.2",
     "fs-extra": "^8.1.0",
     "fs-iconv": "^2.0.10",
-
     "into-stream": "^5.1.0",
     "onecolor": "^3.1.0"
   }
