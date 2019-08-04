@@ -19,20 +19,16 @@ yarn add alpha-mask
 ## code
 
 ```ts
-    import { createWriteStream, pathExistsSync, ensureWriteStream, outputFile } from 'fs-iconv';
-    import { mergeMaskByFile } from 'alpha-mask';
-    import FastGlob from '@bluelovers/fast-glob/bluebird';
-    import * as path from 'path';
-    import { buffer as getStream } from 'get-stream';
+import { createWriteStream, pathExistsSync, ensureWriteStream, outputFile } from 'fs-iconv';
+import { mergeMaskByFile, generateAsync, outputAsync } from 'alpha-mask';
+import FastGlob from '@bluelovers/fast-glob/bluebird';
+import * as path from 'path';
 
-    mergeMaskByFile(path.join(__dirname, './res/char_002_amiya_2.png'), path.join(__dirname, './res/char_002_amiya_2[alpha].png'))
-    .then(img => {
-     return getStream(img.pack())
-      .then(data => {
-       return outputFile(path.join(__dirname, 'out.png'), data)
-      })
-    })
-    ;
+mergeMaskByFile(path.join(__dirname, './res/char_002_amiya_2.png'), path.join(__dirname, './res/char_002_amiya_2[alpha].png'))
+.then(img => {
+	return outputAsync(path.join(__dirname, 'out.png'), img)
+})
+;
 ```
 
 ---

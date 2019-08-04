@@ -1,17 +1,52 @@
 {
   "name": "alpha-mask",
   "version": "1.0.0",
-  "description": "",
+  "description": "merge source.png with mask.png to alpha.png",
+  "homepage": "https://github.com/bluelovers/ws-img#readme",
+  "bugs": {
+    "url": "https://github.com/bluelovers/ws-img/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bluelovers/ws-img.git"
+  },
+  "keywords": [
+    "PNG",
+    "decoder",
+    "encoder",
+    "js-png",
+    "node-png",
+    "parser",
+    "png",
+    "png-js",
+    "png-parse",
+    "pngjs",
+    "png",
+    "scale",
+    "picture",
+    "img",
+    "image",
+    "resize",
+    "alpha",
+    "stream",
+    "buffer",
+    "merge",
+    "mask"
+  ],
   "license": "ISC",
   "author": "",
   "main": "lib/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
   "scripts": {
     "coverage": "npx nyc yarn run test",
     "lint": "npx eslint **/*.ts",
     "ncu": "npx yarn-tool ncu -u",
     "npm:publish": "npm publish",
-    "prepublishOnly": "yarn run ncu && yarn run sort-package-json && yarn run test",
-    "postpublish": "git commit -m \"publish new version\" .",
+    "prepublishOnly": "yarn run ncu && yarn run sort-package-json",
+    "postpublish": "echo postpublish",
     "sort-package-json": "npx sort-package-json ./package.json",
     "test": "echo \"Error: no test specified\" && exit 1",
     "tsc:default": "tsc -p tsconfig.json",
@@ -20,17 +55,18 @@
   "dependencies": {
     "bluebird": "^3.5.5",
     "png-scale": "^1.0.3",
+    "get-stream": "^5.1.0",
     "pngjs": "^3.4.0"
   },
   "devDependencies": {
-    "fs-extra": "^8.1.0",
-    "fs-iconv": "^2.0.10",
     "@bluelovers/fast-glob": "^3.0.4",
     "@types/bluebird": "^3.5.27",
     "@types/fs-extra": "^8.0.0",
     "@types/node": "^12.6.9",
     "@types/pngjs": "^3.3.2",
-    "get-stream": "^5.1.0",
+    "fs-extra": "^8.1.0",
+    "fs-iconv": "^2.0.10",
+
     "into-stream": "^5.1.0",
     "onecolor": "^3.1.0"
   }
