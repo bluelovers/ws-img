@@ -1,6 +1,6 @@
 {
   "name": "alpha-mask",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "merge source.png with mask.png to alpha.png",
   "keywords": [
     "PNG",
